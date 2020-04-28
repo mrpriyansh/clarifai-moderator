@@ -23,7 +23,7 @@ app.post('/imageurl',(req,res)=>{
 	.then(data=>{
 		obj=data.outputs[0].data.concepts;
 		Object.keys(obj).forEach(key=>{
-			let s= `Probabitlity of `+obj[key].name + ' is ' + obj[key].value;
+			let s= `Probability of `+obj[key].name + ' is ' + obj[key].value;
 			result.push(s);
 		})
 		res.json(result);
